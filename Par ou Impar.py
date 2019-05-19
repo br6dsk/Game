@@ -1,9 +1,7 @@
 #Author: Braian
-#Fiquei com preguiça de arrumar, bj
 from random import randint
 from time import sleep
 ganhou = 0
-print(" \nDigite apenas 'par' ou 'impar', se não buga")
 print('●▬▬▬▬▬▬▬▬▬▬▬********▬▬▬▬▬▬▬▬▬▬▬●')
 print('  ░░░░░░ Par ou impar? ░░░░░░ ')
 print('●▬▬▬▬▬▬▬▬▬▬▬********▬▬▬▬▬▬▬▬▬▬▬●')
@@ -18,8 +16,9 @@ while True:
 		break
 	parimpar = parimpar.capitalize()
 	while parimpar != 'Par' and parimpar != 'Impar':
-		parimpar = str(input(" \nDigite novamente - Par ou Impar? → "))
 
+		parimpar = str(input(" \nDigite novamente - Par ou Impar? → "))
+		parimpar = parimpar.capitalize()
 	user_input = int(input("Digite um valor: "))
 	print("O computador está pensando...")
 	sleep(0.2)
@@ -54,5 +53,4 @@ while True:
 		print(f' \nVocê ganhou, pois o computador jogou o numero {cpu_input} e você {user_input}, que tem o total {total}, ou seja, um numero IMPAR!!')
 		sleep(0.2)
 		print(" \n[*] +1 PONTO")
-
 

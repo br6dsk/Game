@@ -1,22 +1,19 @@
 #Author: Braian
 from random import randint
 from time import sleep
+import os
 ganhou = 0
+os.system("cls")
 print('●▬▬▬▬▬▬▬▬▬▬▬********▬▬▬▬▬▬▬▬▬▬▬●')
 print('  ░░░░░░ Par ou impar? ░░░░░░ ')
 print('●▬▬▬▬▬▬▬▬▬▬▬********▬▬▬▬▬▬▬▬▬▬▬●')
 print("\t\tsair: 'sair'")
-
-
 while True:
-
 	parimpar = str(input(" \nPar ou Impar? → "))
-
 	if parimpar == 'sair':
 		break
 	parimpar = parimpar.capitalize()
-	while parimpar != 'Par' and parimpar != 'Impar':
-
+	while parimpar != 'Par' and parimpar != 'Impar':	
 		parimpar = str(input(" \nDigite novamente - Par ou Impar? → "))
 		parimpar = parimpar.capitalize()
 	user_input = int(input("Digite um valor: "))
@@ -35,22 +32,21 @@ while True:
 		ganhou+=1
 		print(f' \nVocê ganhou, pois o computador jogou o numero {cpu_input} e você {user_input}, que tem o total {total}, ou seja, um numero PAR!!')
 		sleep(0.2)
-		print(" \n[*] +1 PONTO")
+		print(" \n[*] +1 PONTO")	
 	elif parimpar == 'Impar' and total%2==0:
 		print(f' \nVocê perdeu, pois o computador jogou o numero {cpu_input} e você {user_input}, que tem o total {total}, ou seja, um numero PAR!!')
 		sleep(0.2)
 		print(" \n[*] GameOver :( ")
-		print(f' \nVocê ganhou {ganhou} vezes !')
+		print(f' \nVocê ganhou {ganhou} vezes !')	
 		break
 	elif parimpar =='Par' and total%2!=0:
 		print(f' \nVocê perdeu, pois o computador jogou o numero {cpu_input} e você {user_input}, que tem o total {total}, ou seja, um numero IMPAR!!')
 		sleep(0.2)
 		print(" \n[*] GameOver :( ")
-		print(f' \nVocê ganhou {ganhou} vezes !')
+		print(f' \nVocê ganhou {ganhou} vezes !')		
 		break
 	elif parimpar =='Impar' and total%2!=0:
 		ganhou+=1
 		print(f' \nVocê ganhou, pois o computador jogou o numero {cpu_input} e você {user_input}, que tem o total {total}, ou seja, um numero IMPAR!!')
 		sleep(0.2)
 		print(" \n[*] +1 PONTO")
-

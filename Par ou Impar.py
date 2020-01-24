@@ -1,4 +1,4 @@
-#Author: Braian
+#Author: brndsk
 from random import randint
 from time import sleep
 import os
